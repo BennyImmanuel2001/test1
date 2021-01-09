@@ -51,3 +51,40 @@ namespace sscTechnologies
             }
             Console.WriteLine();
             #endregion
+
+
+            #region jagged array
+            Console.WriteLine();
+            Console.WriteLine("Jagged Array");
+            Console.WriteLine();
+
+            int[][] testArray = new int[rowsize][];
+            //to initialize innerarray
+            for (int i = 0; i < testArray.Length; i++)
+            {
+                testArray[i] = new int[colsize];
+            }
+           
+            //to store random values in to the array
+            for (int i = 0; i < testArray.Length; i++)
+            {
+                for (int j = 0; j < testArray[i].Length; j++)
+                {
+                    testArray[i][j] = random.Next(1, 10);
+                }
+            }
+            //to print the values in ana rray
+            for (int i = 0; i < testArray.Length; i++)
+            {
+                for (int j = 0; j < testArray[i].Length; j++)
+                {
+                    Console.Write($"Index {i},{j} : {testArray[i][j]}\t");
+                }
+                Console.WriteLine();
+            }
+            #endregion
+            Console.ReadLine();
+        }
+
+    }
+}
